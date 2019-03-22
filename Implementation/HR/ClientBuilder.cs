@@ -1,8 +1,8 @@
 using System;
 using System.Collections.Generic;
-using Practice.HR;
+using Practice.Common;
 
-namespace Practice.Common
+namespace Practice.HR
 {
 	internal class ClientBuilder : IClientBuilder
 	{

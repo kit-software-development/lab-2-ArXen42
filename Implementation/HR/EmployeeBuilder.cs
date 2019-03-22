@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Practice.HR;
+using Practice.Common;
 using Practice.Organization;
 
-namespace Practice.Common
+namespace Practice.HR
 {
 	internal class EmployeeBuilder : IEmployeeBuilder
 	{
