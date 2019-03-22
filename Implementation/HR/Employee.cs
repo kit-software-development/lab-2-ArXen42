@@ -10,6 +10,7 @@ namespace Practice.HR
 	internal class Employee : AbstractPerson, IEmployee
 	{
 		private IDepartment _department;
+
 		public event EventHandler<ValueChangeEventArgs<IDepartment>> DepartmentChanged;
 
 		public IDepartment Department
@@ -22,7 +23,7 @@ namespace Practice.HR
 
 				var oldValue = _department;
 				_department = value;
-				
+
 				DepartmentChanged?.Invoke(this, new ValueChangeEventArgs<IDepartment>(oldValue));
 			}
 		}

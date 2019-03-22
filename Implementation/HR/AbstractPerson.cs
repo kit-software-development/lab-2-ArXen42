@@ -1,7 +1,6 @@
 ﻿using System;
 using Practice.Common;
 using Practice.HR.Events;
-using Practice.Organization;
 
 namespace Practice.HR
 {

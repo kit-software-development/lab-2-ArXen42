@@ -1,5 +1,3 @@
-using Practice.Common;
-
 namespace Practice.HR
 {
 	/// <summary>
