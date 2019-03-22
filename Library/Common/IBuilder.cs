@@ -6,7 +6,7 @@ namespace Practice.Common
 	/// <typeparam name="T">
 	///     Тип экземпляров, создаваемых строителем.
 	/// </typeparam>
-	public interface IBuilder<T>
+	public interface IBuilder<out T>
 	{
 		/// <summary>
 		///     Возвращает экземпляр типа, описанного параметром T.
