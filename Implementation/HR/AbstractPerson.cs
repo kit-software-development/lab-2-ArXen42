@@ -30,5 +30,7 @@ namespace Practice.HR
 				NameChanged?.Invoke(this, new ValueChangeEventArgs<IName>(oldName));
 			}
 		}
+
+		// Убраны внутренние свойства Name и Department, так как они только создавали ненужные конфликты
 	}
 }

@@ -9,7 +9,7 @@ namespace Practice.Common
 	{
 		public Name(String firstName, String surname, String patronymic)
 		{
-			// Так как ограничений и конкретного поведения данного класса в задании не оговорено, пока будем считать все три поля обязательными
+			// Так как ограничений и конкретного поведения данного класса в задании не оговорено, пока все три аргумента считаются обязательными.
 
 			if (String.IsNullOrWhiteSpace(firstName))
 				throw new ArgumentException(nameof(firstName));
