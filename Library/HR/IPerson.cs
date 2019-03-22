@@ -12,7 +12,7 @@ namespace Practice.HR
 		/// <summary>
 		///     Событие изменения имени челока.
 		/// </summary>
-		event EventHandler<ValueChangeEventArgs<IName>> NameChange;
+		event EventHandler<ValueChangeEventArgs<IName>> NameChanged;
 
 		/// <summary>
 		///     Имя человека.

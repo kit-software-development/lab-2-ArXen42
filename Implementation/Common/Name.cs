@@ -41,6 +41,6 @@ namespace Practice.Common
 		public String Patronymic { get; }
 
 		public String FullName  => $"{FirstName} {Patronymic} {Surname}";
-		public String ShortName => $"{FirstName[0]} {Patronymic[0]} {Surname}";
+		public String ShortName => $"{FirstName[0]}.{Patronymic[0]}. {Surname}";
 	}
 }

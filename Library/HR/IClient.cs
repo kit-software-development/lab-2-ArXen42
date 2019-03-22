@@ -3,6 +3,7 @@ using Practice.Common;
 
 namespace Practice.HR
 {
+	/// <inheritdoc />
 	/// <summary>
 	///     Абстрактное представление о клиенте.
 	/// </summary>
@@ -14,6 +15,7 @@ namespace Practice.HR
 		Single Discount { get; set; }
 	}
 
+	/// <inheritdoc />
 	/// <summary>
 	///     Абстрактное представление о реализации эталона
 	///     проектирования "Строитель" для типа данных IClient.
@@ -32,13 +34,13 @@ namespace Practice.HR
 		/// <summary>
 		///     Настраивает значение имени для будущего экземпляра типа IClient.
 		/// </summary>
-		/// <param name="name">имя</param>
+		/// <param name="firstName">имя</param>
 		/// <param name="surname">фамилия</param>
 		/// <param name="patronymic">отчество</param>
 		/// <returns>
 		///     Текущий экземпляр "Строителя".
 		/// </returns>
-		IClientBuilder Name(String name, String surname, String patronymic);
+		IClientBuilder Name(String firstName, String surname, String patronymic);
 
 		/// <summary>
 		///     Настраивает значение скидки для будущего экземпляра типа IClient.

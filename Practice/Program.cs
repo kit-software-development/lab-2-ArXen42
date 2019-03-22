@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Practice.HR;
 
 namespace Practice
@@ -25,13 +26,8 @@ namespace Practice
 				.Department("Бухгалтерия")
 				.Build();
 
-			/*
-			 * TODO #8: Собрать приложение. 
-			 */
-
-			/*
-			 * TODO #9: При помощи отладчика проверить типы и структуру объектов, адресованных переменными client и employee.
-			 */
+			Console.WriteLine($"{client.Name.FullName} {client.Discount.ToString(CultureInfo.InvariantCulture)}");
+			Console.WriteLine($"{employee.Name.ShortName} {employee.Department.Name}");
 		}
 	}
 }

@@ -1,4 +1,4 @@
-using System;
+using Practice.Common;
 
 namespace Practice.HR
 {
@@ -16,10 +16,7 @@ namespace Practice.HR
 		/// </returns>
 		public static IClientBuilder ClientBuilder()
 		{
-			/*
-			 * TODO #6: Реализовать фабричный метод ClientBuilder класса Builders
-			 */
-			throw new NotImplementedException();
+			return new ClientBuilder();
 		}
 
 		/// <summary>
@@ -30,10 +27,7 @@ namespace Practice.HR
 		/// </returns>
 		public static IEmployeeBuilder EmployeeBuilder()
 		{
-			/*
-			 * TODO #7: Реализовать фабричный метод EmployeeBuilder класса Builders
-			 */
-			throw new NotImplementedException();
+			return new EmployeeBuilder();
 		}
 	}
 }

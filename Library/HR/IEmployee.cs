@@ -13,7 +13,7 @@ namespace Practice.HR
 		/// <summary>
 		///     Событие изменения отдела, в котором работает сотрудник.
 		/// </summary>
-		event EventHandler<ValueChangeEventArgs<IDepartment>> DepartmentChange;
+		event EventHandler<ValueChangeEventArgs<IDepartment>> DepartmentChanged;
 
 		/// <summary>
 		///     Отдел, в котором работает сотрудник.
@@ -39,13 +39,13 @@ namespace Practice.HR
 		/// <summary>
 		///     Настраивает значение имени для будущего экземпляра типа IEmployee.
 		/// </summary>
-		/// <param name="name">имя</param>
+		/// <param name="firstName">имя</param>
 		/// <param name="surname">фамилия</param>
 		/// <param name="patronymic">отчество</param>
 		/// <returns>
 		///     Текущий экземпляр "Строителя".
 		/// </returns>
-		IEmployeeBuilder Name(String name, String surname, String patronymic);
+		IEmployeeBuilder Name(String firstName, String surname, String patronymic);
 
 		/// <summary>
 		///     Настраивает значение отледа для будущего экземпляра типа IEmployee.
@@ -61,12 +61,12 @@ namespace Practice.HR
 		/// <summary>
 		///     Настраивает значение отледа для будущего экземпляра типа IEmployee.
 		/// </summary>
-		/// <param name="department">
+		/// <param name="departmentName">
 		///     Название отдела, в котором работает сотрудник.
 		/// </param>
 		/// <returns>
 		///     Текущий экземпляр "Строителя".
 		/// </returns>
-		IEmployeeBuilder Department(String department);
+		IEmployeeBuilder Department(String departmentName);
 	}
 }
