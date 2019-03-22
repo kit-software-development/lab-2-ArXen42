@@ -1,39 +1,35 @@
-﻿namespace Practice.HR
+﻿using System;
+using Practice.Common;
+using Practice.HR.Events;
+
+namespace Practice.HR
 {
-    /// <summary>
-    ///     Абстрактная база для описания конкретных реализаций типа "Человек".
-    ///     Используется для дальнейшего наследования.
-    /// </summary>
-    internal abstract class AbstractPerson
-    {
-        internal Organization.Department Department
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+	/// <summary>
+	///     Абстрактная база для описания конкретных реализаций типа "Человек".
+	///     Используется для дальнейшего наследования.
+	/// </summary>
+	internal abstract class AbstractPerson : IPerson
+	{
+		private IName _name;
 
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
+		public event EventHandler<ValueChangeEventArgs<IName>> NameChanged;
 
-        internal Common.Name Name
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+		public IName Name
+		{
+			get => _name;
 
-            set
-            {
-                throw new System.NotImplementedException();
-            }
-        }
-        
-        /*
-         * TODO #3: Реализуйте интерфейс IPerson для класса AbstractPerson
-         */
-    }
+			set
+			{
+				if (_name == value)
+					return;
+
+				var oldName = _name;
+				_name = value;
+
+				NameChanged?.Invoke(this, new ValueChangeEventArgs<IName>(oldName));
+			}
+		}
+
+		// Убраны внутренние свойства Name и Department, так как они только создавали ненужные конфликты
+	}
 }
